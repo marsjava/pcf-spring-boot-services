@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.learning.pcf.model.User;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping()
 public class UserController {
+	@GetMapping("/")
+	public String getStatus() {
+		return "status: userController Invokes";
+	}
 	@GetMapping("/say-hello")
 	public String sayHello() {
 		return "Welcome back to - Spring boot Hello world";

@@ -1,0 +1,10 @@
+applications:
+- name: hello-world-rest-api
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target/hello-world-rest-api.jar
+  routes:
+  - route: hello-world-rest-api-relaxed-gorilla-pn.cfapps.io
+  - route: hello-world-rest-api-mari.cfapps.io
+  stack: cflinuxfs3
